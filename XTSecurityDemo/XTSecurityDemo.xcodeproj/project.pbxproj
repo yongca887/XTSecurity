@@ -14,6 +14,10 @@
 		EEAB89CE19FF789100805B4B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEAB89CD19FF789100805B4B /* Images.xcassets */; };
 		EEAB89D119FF789100805B4B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEAB89CF19FF789100805B4B /* LaunchScreen.xib */; };
 		EEAB89DD19FF789100805B4B /* XTSecurityDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAB89DC19FF789100805B4B /* XTSecurityDemoTests.m */; };
+		EEAB89ED19FF7A0300805B4B /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAB89E919FF7A0300805B4B /* GTMBase64.m */; };
+		EEAB89F119FF7A2200805B4B /* XTSecurityUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAB89F019FF7A2200805B4B /* XTSecurityUtil.m */; };
+		EEAB89F419FF7B6800805B4B /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAB89F319FF7B6800805B4B /* NSData+AES.m */; };
+		EEAB89F719FF7B7C00805B4B /* NSData+DES.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAB89F619FF7B7C00805B4B /* NSData+DES.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,15 @@
 		EEAB89D619FF789100805B4B /* XTSecurityDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTSecurityDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEAB89DB19FF789100805B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEAB89DC19FF789100805B4B /* XTSecurityDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTSecurityDemoTests.m; sourceTree = "<group>"; };
+		EEAB89E819FF7A0300805B4B /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		EEAB89E919FF7A0300805B4B /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		EEAB89EA19FF7A0300805B4B /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		EEAB89EF19FF7A2200805B4B /* XTSecurityUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTSecurityUtil.h; sourceTree = "<group>"; };
+		EEAB89F019FF7A2200805B4B /* XTSecurityUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTSecurityUtil.m; sourceTree = "<group>"; };
+		EEAB89F219FF7B6800805B4B /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		EEAB89F319FF7B6800805B4B /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
+		EEAB89F519FF7B7C00805B4B /* NSData+DES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DES.h"; sourceTree = "<group>"; };
+		EEAB89F619FF7B7C00805B4B /* NSData+DES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DES.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,7 @@
 		EEAB89B419FF789100805B4B = {
 			isa = PBXGroup;
 			children = (
+				EEAB89E619FF7A0300805B4B /* XTSecurityUtil */,
 				EEAB89BF19FF789100805B4B /* XTSecurityDemo */,
 				EEAB89D919FF789100805B4B /* XTSecurityDemoTests */,
 				EEAB89BE19FF789100805B4B /* Products */,
@@ -117,6 +131,31 @@
 				EEAB89DB19FF789100805B4B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEAB89E619FF7A0300805B4B /* XTSecurityUtil */ = {
+			isa = PBXGroup;
+			children = (
+				EEAB89E719FF7A0300805B4B /* GTMBase64 */,
+				EEAB89EF19FF7A2200805B4B /* XTSecurityUtil.h */,
+				EEAB89F019FF7A2200805B4B /* XTSecurityUtil.m */,
+				EEAB89F519FF7B7C00805B4B /* NSData+DES.h */,
+				EEAB89F619FF7B7C00805B4B /* NSData+DES.m */,
+				EEAB89F219FF7B6800805B4B /* NSData+AES.h */,
+				EEAB89F319FF7B6800805B4B /* NSData+AES.m */,
+			);
+			name = XTSecurityUtil;
+			path = ../XTSecurityUtil;
+			sourceTree = "<group>";
+		};
+		EEAB89E719FF7A0300805B4B /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				EEAB89E819FF7A0300805B4B /* GTMBase64.h */,
+				EEAB89E919FF7A0300805B4B /* GTMBase64.m */,
+				EEAB89EA19FF7A0300805B4B /* GTMDefines.h */,
+			);
+			path = GTMBase64;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +258,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEAB89F119FF7A2200805B4B /* XTSecurityUtil.m in Sources */,
 				EEAB89C919FF789100805B4B /* ViewController.m in Sources */,
+				EEAB89F719FF7B7C00805B4B /* NSData+DES.m in Sources */,
+				EEAB89F419FF7B6800805B4B /* NSData+AES.m in Sources */,
 				EEAB89C619FF789100805B4B /* AppDelegate.m in Sources */,
 				EEAB89C319FF789100805B4B /* main.m in Sources */,
+				EEAB89ED19FF7A0300805B4B /* GTMBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +455,7 @@
 				EEAB89E219FF789100805B4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EEAB89E319FF789100805B4B /* Build configuration list for PBXNativeTarget "XTSecurityDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +464,7 @@
 				EEAB89E519FF789100805B4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

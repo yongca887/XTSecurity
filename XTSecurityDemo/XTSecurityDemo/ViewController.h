@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *contentTextField;
+@property (strong, nonatomic) IBOutlet UILabel *resultLabel;
 
 @end
 

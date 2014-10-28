@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,102 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="加密|解密Demo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLl-xF-TuD">
+                                <rect key="frame" x="241" y="37" width="118" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LyH-Rq-IKA"/>
+                                    <constraint firstAttribute="width" constant="118" id="Tu9-xw-NkB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tau-6m-sEb">
+                                <rect key="frame" x="272" y="368" width="57" height="30"/>
+                                <state key="normal" title="SHA512">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SHA512:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dKy-FA-w7T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtN-S4-eaw">
+                                <rect key="frame" x="274" y="323" width="52" height="30"/>
+                                <state key="normal" title="Base64">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Base64:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iYy-q6-Sd6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiT-B3-xQM">
+                                <rect key="frame" x="175" y="161" width="250" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gXY-Xl-57s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入要加密的内容" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z9G-Mo-pL4">
+                                <rect key="frame" x="175" y="92" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="zFh-8S-NEm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb6-58-Oac">
+                                <rect key="frame" x="284" y="275" width="33" height="30"/>
+                                <state key="normal" title="MD5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MD5:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dz7-wW-JlD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gt-Wu-MIe">
+                                <rect key="frame" x="284" y="203" width="30" height="30"/>
+                                <state key="normal" title="AES">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="AES:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OF7-ie-9fa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3M-Uu-fSY">
+                                <rect key="frame" x="284" y="241" width="30" height="30"/>
+                                <state key="normal" title="DES">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DES:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U2D-hf-X7m"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nLl-xF-TuD" firstAttribute="centerX" secondItem="tau-6m-sEb" secondAttribute="centerX" id="0Ud-B2-lql"/>
+                            <constraint firstItem="nLl-xF-TuD" firstAttribute="centerX" secondItem="GiT-B3-xQM" secondAttribute="centerX" id="6kq-1q-2hG"/>
+                            <constraint firstItem="nLl-xF-TuD" firstAttribute="centerX" secondItem="s3M-Uu-fSY" secondAttribute="centerX" id="EGs-JK-jRI"/>
+                            <constraint firstItem="nLl-xF-TuD" firstAttribute="centerX" secondItem="Sb6-58-Oac" secondAttribute="centerX" id="NW9-MG-squ"/>
+                            <constraint firstItem="nLl-xF-TuD" firstAttribute="centerX" secondItem="z9G-Mo-pL4" secondAttribute="centerX" id="Z0F-d2-BU8"/>
+                            <constraint firstAttribute="centerX" secondItem="nLl-xF-TuD" secondAttribute="centerX" id="jj4-fo-7Sr"/>
+                            <constraint firstItem="nLl-xF-TuD" firstAttribute="centerX" secondItem="7Gt-Wu-MIe" secondAttribute="centerX" id="kVO-82-LKa"/>
+                            <constraint firstItem="nLl-xF-TuD" firstAttribute="centerX" secondItem="JtN-S4-eaw" secondAttribute="centerX" id="nOW-Ps-FmH"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="contentTextField" destination="z9G-Mo-pL4" id="1Wi-t6-YoD"/>
+                        <outlet property="resultLabel" destination="GiT-B3-xQM" id="qap-bH-AwD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="12" y="163"/>
         </scene>
     </scenes>
 </document>
